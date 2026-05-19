@@ -1,5 +1,5 @@
 Name:           marshalparser
-Version:        0.3.4
+Version:        0.4.0
 Release:        1%{?dist}
 Summary:        Parser for Python internal Marshal format
 
@@ -13,6 +13,8 @@ BuildRequires:  pyproject-rpm-macros
 
 # Test dependencies
 BuildRequires:  python3.11
+BuildRequires:  python3.12
+BuildRequires:  python3.14
 
 %generate_buildrequires
 %pyproject_buildrequires -x test
@@ -40,6 +42,9 @@ reproducibility.
 %{_bindir}/%{name}
 
 %changelog
+* Wed Oct 23 2024 Lumir Balhar <lbalhar@redhat.com> - 0.4.0-1
+- Update to 0.4.0
+
 * Tue Mar 28 2023 Lumír Balhar <lbalhar@redhat.com> - 0.3.4-1
 - Rebase to 0.3.4 and enable testing with Python 3.11
 Resolves: RHEL-309
